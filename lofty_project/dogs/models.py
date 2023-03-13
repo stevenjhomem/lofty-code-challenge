@@ -6,7 +6,7 @@ from django.core.files import File
 from django.db import models
 
 
-class DogImages(models.Model):
+class DogImageSet(models.Model):
     created_ts = models.DateTimeField(auto_now_add=True, verbose_name='Created Timestamp')
     updated_ts = models.DateTimeField(auto_now=True, verbose_name='Updated Timestamp')
     default_image = models.ImageField(null=False, blank=False, verbose_name='Original Image')

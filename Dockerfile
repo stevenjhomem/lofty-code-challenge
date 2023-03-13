@@ -1,6 +1,7 @@
 FROM python:3.10-slim
 
 ENV DJANGO_SETTINGS_MODULE=config.settings
+ENV PYTHONUNBUFFERED=1
 
 COPY config /app/config/
 COPY lofty_project /app/lofty_project/
