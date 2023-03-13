@@ -1,6 +1,6 @@
 from django.urls import path
 
-import dogs.api.views as views
+import lofty_project.dogs.api.views as views
 
 app_name = 'dogs'  # url up to this point /dogs/
 

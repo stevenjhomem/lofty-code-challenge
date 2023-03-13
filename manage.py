@@ -5,6 +5,10 @@ import sys
 
 
 def main():
+    current_directory = os.path.dirname(__file__)
+    apps_directory = os.path.join(current_directory, 'lofty_project')
+    sys.path.append(apps_directory)
+
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
     try:

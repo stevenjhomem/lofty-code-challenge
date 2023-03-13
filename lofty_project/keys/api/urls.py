@@ -1,6 +1,6 @@
 from django.urls import path
 
-import keys.api.views as views
+import lofty_project.keys.api.views as views
 
 app_name = 'keys'  # url up to this point /keys/
 
