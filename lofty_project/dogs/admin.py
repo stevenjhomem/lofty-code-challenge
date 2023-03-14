@@ -7,6 +7,7 @@ from dogs.models import DogImageSet
 class DogAdmin(admin.ModelAdmin):
     model = DogImageSet
     list_display = [
+        'id',
         'default_image',
         'modified_image',
         'original_image_metadata',

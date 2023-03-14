@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Detail View</title>
+</head>
+<body>
+<h2>
+		Dog Details for Dog: {{ id }}:
+	</h2>
+	<ul>
+        <li> <b>Original Image:</b> <img alt="Picture Missing" src={{ default_image }} ></li>
+        <li> <b>Modified Image:</b> <img alt="Picture Missing" src={{ modified_image }} ></li>
+        <li> <b>Image Metadata:</b> {{ image_meta_data }}</li>
+	</ul>
+	<hr style="margin-top: 24px; margin-bottom: 24px;">
+</body>
+</html>

@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            '--total_dogs',
+            '--total_seeds',
             type=int,
             help="Number of dog images to collect",
         ),

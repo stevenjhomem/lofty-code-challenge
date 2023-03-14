@@ -5,6 +5,6 @@ import lofty_project.dogs.api.views as views
 app_name = 'dogs'  # url up to this point /dogs/
 
 urlpatterns = [
-    path('', views.DogListView.as_view(), name='dog-list'),
-    path('<int:dog_id>/', views.DogDetailView.as_view(), name='dog-detail'),
+    path('', views.DogImageSetListView.as_view(), name='dog-set-list'),
+    path('<int:dis_id>/', views.DogImageSetDetailView.as_view(), name='dog-set-detail'),
 ]

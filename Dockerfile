@@ -7,7 +7,6 @@ COPY config /app/config/
 COPY lofty_project /app/lofty_project/
 COPY manage.py /app/manage.py
 COPY requirements.txt /app
-RUN mkdir /app/lofty_project/media
 
 RUN chmod +r /app/lofty_project/media
 
