@@ -1,7 +1,7 @@
 import requests
 from django.core.management.base import BaseCommand
 
-from dogs.models import DogImages
+from dogs.models import DogImageSet
 
 
 class Command(BaseCommand):
@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            '--total_seeds',
+            '--total_dogs',
             type=int,
             help="Number of dog images to collect",
         ),
@@ -31,7 +31,7 @@ class Command(BaseCommand):
                 self.stdout.write(f'---Successful---')
                 self.stdout.write(f'Writing image {index + 1} contents to memory and extracting metadata.')
 
-                dog_images = DogImages()
+                dog_images = DogImageSet()
                 dog_images.set_default_image(image_response.content)
                 dog_images.set_default_image_metadata(image_response.content)
                 dog_images.save()
