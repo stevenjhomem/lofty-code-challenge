@@ -33,8 +33,10 @@ class Command(BaseCommand):
 
                 dog_images = DogImageSet()
                 dog_images.set_default_image(image_response.content)
+                dog_images.modify_default_image()
                 dog_images.set_default_image_metadata(image_response.content)
                 dog_images.save()
+
                 self.stdout.write(f'---Successful---')
             self.stdout.write('Seeding has completed successfully. Please check admin to see newly added dog data.')
         except requests.exceptions.HTTPError as err:
